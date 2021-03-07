@@ -4,3 +4,4 @@ input/*
 logs/*
 models/*
 notebooks/*
+misc_functions.py

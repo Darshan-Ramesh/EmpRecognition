@@ -134,16 +134,19 @@ if __name__ == "__main__":
 
     train_dict, val_dict = gen.split()
 
+    train_excel_name = 'train'
+    valid_excel_name = 'valid'
+
     print(
-        f"[INFO] Writing the {excel_name} dictionaries to disk as excel file in - {cfg.TRAIN_EXCEL_PATH}",
+        f"[INFO] Writing the {train_excel_name} dictionaries to disk as excel file in - {cfg.TRAIN_EXCEL_PATH}",
         end=" ",
     )
-    gen.save_excel(train_dict, "train")
+    gen.save_excel(train_dict, train_excel_name)
     print("...OK!")
 
     print(
-        f"[INFO] Writing the {excel_name} dictionaries to disk as excel file in - {cfg.VALID_EXCEL_PATH}",
+        f"[INFO] Writing the {valid_excel_name} dictionaries to disk as excel file in - {cfg.VALID_EXCEL_PATH}",
         end=" ",
     )
-    gen.save_excel(val_dict, "valid")
+    gen.save_excel(val_dict, valid_excel_name)
     print("...OK!")
